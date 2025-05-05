@@ -1,0 +1,25 @@
+public class Soldado implements Hierarquia {
+    private TipoDeArma tipoDeArma;
+
+    public Soldado(TipoDeArma tipoDeArma) {
+        this.tipoDeArma = tipoDeArma;
+    }
+
+    private int getNivel() {
+        return 1;
+    }
+
+    public boolean superiorA(Hierarquia obj) {
+        if (obj instanceof Soldado) return false;
+        return this.getNivel() > ((PessoaMilitar)obj) .getNivel();
+    }
+
+    public boolean inferiorA(Hierarquia obj) {
+        if (obj instanceof Soldado) return false;
+        return this.getNivel() < ((PessoaMilitar)obj) .getNivel();
+    }
+
+    public boolean equivalenteA(Hierarquia obj) {
+        return obj instanceof Soldado;
+    }
+    }
