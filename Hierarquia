@@ -1,0 +1,9 @@
+public enum TipoDeArma {
+    ARTILHARIA, INFANTARIA, CAVALARIA;
+}
+
+public interface Hierarquia {
+    public boolean superiorA(Hierarquia obj);
+    public boolean inferiorA(Hierarquia obj);
+    public boolean equivalenteA(Hierarquia obj);
+}
