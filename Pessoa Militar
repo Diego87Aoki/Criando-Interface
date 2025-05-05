@@ -1,0 +1,9 @@
+ public abstract class PessoaMilitar implements Hierarquia {
+        protected TipoDeArma tipoDeArma;
+
+        public PessoaMilitar(TipoDeArma tipoDeArma) {
+            this.tipoDeArma = tipoDeArma;
+        }
+
+        public  abstract int getNivel();
+    }
