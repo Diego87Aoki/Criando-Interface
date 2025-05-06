@@ -1,25 +1,5 @@
-public class Capitao implements Hierarquia {
-    private TipoDeArma tipoDeArma;
-
-    public Capitao(TipoDeArma tipoDeArma) {
-        this.tipoDeArma = tipoDeArma;
+public class Capitao extends PessoaMilitar {
+    public Capitao(TipoDeArma arma) {
+        super(arma, 2);
     }
-
-    private int getNivel() {
-        return 2;
-    }
-
-    public boolean superiorA(Hierarquia obj) {
-        if (obj instanceof Capitao) return false;
-        return this.getNivel() > ((PessoaMilitar)obj) .getNivel();
-    }
-
-    public boolean inferiorA(Hierarquia obj) {
-        if (obj instanceof Capitao) return false;
-        return this.getNivel() < ((PessoaMilitar)obj) .getNivel();
-    }
-
-    public boolean equivalenteA(Hierarquia obj) {
-        return obj instanceof Capitao;
-    }
-    }
+}
