@@ -1,25 +1,5 @@
-public class General implements Hierarquia {
-    private TipoDeArma tipoDeArma;
-
-    public General(TipoDeArma tipoDeArma) {
-        this.tipoDeArma = tipoDeArma;
+public class General extends PessoaMilitar {
+    public General(TipoDeArma arma) {
+        super(arma, 3);
     }
-
-    private int getNivel() {
-        return 3;
-    }
-
-    public boolean superiorA(Hierarquia obj) {
-        if (obj instanceof General) return false;
-        return this.getNivel() > ((PessoaMilitar)obj) .getNivel();
-    }
-
-    public boolean inferiorA(Hierarquia obj) {
-        if (obj instanceof General) return false;
-        return this.getNivel() < ((PessoaMilitar)obj) .getNivel();
-    }
-
-    public boolean equivalenteA(Hierarquia obj) {
-        return obj instanceof General;
-    }
-    }
+}
